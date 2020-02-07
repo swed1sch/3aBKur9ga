@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace _3aBKur9ga
+namespace SmokeTube
 {
     public class Program
     {
@@ -19,6 +19,6 @@ namespace _3aBKur9ga
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>().UseDefaultServiceProvider(options => options.ValidateScopes = false);
     }
 }

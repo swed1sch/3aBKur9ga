@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Pokur>
+
+@foreach (var v in Model)
+{
+
+    <h3>@v.Members</h3>
+    <h3>@v.NameOfTobacco</h3>
+    <h4>@v.AmountOfTobacco g</h4>
+    <h4>@v.PriceOfTobacco.ToString("c")</h4>
+}
